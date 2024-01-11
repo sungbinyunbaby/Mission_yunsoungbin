@@ -10,7 +10,6 @@
 localhost:9090/boards로 들어가면 게시판 종류와 게시글을 생성할 수 있는 페이지가 출력된다.
 
  ![Alt text](image-1.png)
-<video src="%EA%B2%8C%EC%8B%9C%ED%8C%90%EB%B3%B4%EA%B8%B0%EC%98%81%EC%83%81.mp4" controls title="Title"></video>
  원하는 게시판을 클릭하면 그 게시판의 게시글이 최신글부터 출력된다.
 
 
@@ -28,10 +27,10 @@ localhost:9090/boards로 들어가면 게시판 종류와 게시글을 생성할
  ![Alt text](image-4.png)
  ![Alt text](image-5.png)
  ![Alt text](<게시판 삭제 영상.gif>)
- <video src="%EA%B2%8C%EC%8B%9C%ED%8C%90%EC%88%98%EC%A0%95%EC%98%81%EC%83%81.mp4" controls title="Title"></video>
+![Alt text](%EA%B2%8C%EC%8B%9C%ED%8C%90%EC%88%98%EC%A0%95.gif)
+
  수정 및 삭제를 원할 시 비밀번호를 입력을 해야 동작이 가능하다.
 
- ![Alt text](image-6.png)
  비밀번호가 맞으면 삭제가 된다.
 
  ```java
@@ -66,23 +65,28 @@ localhost:9090/boards로 들어가면 게시판 종류와 게시글을 생성할
  입력 후 저장하면 원하는 게시판에 저장이 된다.
 
 ## 댓글 기능
-![Alt text](image-9.png)
-단일화면조회 페이지에 댓글이 있다.
-
 ![Alt text](image-16.png)
 댓글이 없으면 No Comments Here이 출력된다.
 
+![Alt text](image-9.png)
+단일화면조회 페이지에 댓글이 있다.
+
 ![Alt text](image-10.png)
-<video src="%EB%8C%93%EA%B8%80%EC%9E%91%EC%84%B1%EC%98%81%EC%83%81.mp4" controls title="Title"></video>
 제목과 비밀번호를 입력하면 저장이 된다.
 
 ![Alt text](image-11.png)
-<video src="%EB%8C%93%EA%B8%80%EC%82%AD%EC%A0%9C%EC%98%81%EC%83%81.mp4" controls title="Title"></video>
 삭제링크를 누르면 비밀번호 입력 후 댓글을 삭제할 수 있다. 
 
 ![Alt text](image-12.png)
-
 비밀번호가 맞으면 삭제한다.
+
+![Alt text](%EB%8C%93%EA%B8%80%EC%9E%91%EC%84%B1.gif)
+
+댓글 수정
+
+![Alt text](%EB%8C%93%EA%B8%80%EC%82%AD%EC%A0%9C.gif)
+
+댓글 삭제
 
 ```java
 //return password.equals? 삭제완료 : 비밀번호입력창
