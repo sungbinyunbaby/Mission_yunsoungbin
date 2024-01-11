@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>articleCreate</title>
+</head>
+<body>
+<h1>게시글 작성</h1>
+<form action="/boards/article" method="post">
+    <p>제목: <input type="text" name="title" placeholder="제목을 입력하세요."></p>
+    <p>내용: <input type="text" name="content" placeholder="내용을 입력하세요."></p>
+    <p>비밀번호: <input type="password" name="password" placeholder="비밀번호를 입력하세요."></p>
+    게시판:
+    <select name="boardsEntity">
+        <option th:each="boards : ${boardList}" th:value="${boards.id}">
+            [[${boards.boards}]]
+        </option>
+    </select>
+    <p><input type="submit" value="저장"></p>
+</form>
+<p><a href="/boards">Home</a></p>
+</body>
+</html>

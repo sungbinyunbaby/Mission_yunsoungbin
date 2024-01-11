@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Article</title>
+</head>
+<body>
+<h1>[[${h1Board.boards}]]</h1>
+<div>
+    <ul>
+        <li>
+            <p>제목: [[${article.title}]]</p>
+            <p>내용: [[${article.content}]]</p>
+            <a th:href="@{/article/{id}/updatePassword(id=${article.id})}">수정</a>
+            <a th:href="@{/article/{id}/deletePassword(id=${article.id})}">삭제</a>
+        </li>
+    </ul>
+</div>
+<!--댓글 Create-->
+<!--댓글 List-->
+<form th:action="@{/article/{id}/comment(id=${commentList.id})}" method="post">
+    댓글작성: <input type="text" name="comment" placeholder="댓글을 작성하세요.">
+    비빌번호: <input type="password" name="password" placeholder="비밀번호를 넣어주세요." >
+    <input type="submit" value="저장">
+</form>
+
+<div th:if="${commentList.commentsEntityList.isEmpty()}">
+    <p>Damnnnnn,,,,, No Comments Here,,,</p>
+</div>
+<div th:unless="${commentList.commentsEntityList.isEmpty()}"
+     th:each="comment : ${commentList.commentsEntityList}">
+    <ul>
+        <li>[[${comment.comment}]]
+            <a th:href="@{/article/{articleId}/commentPassword/{deleteId}/deletePassword(articleId=${commentList.id}, deleteId=${comment.id})}">삭제</a>
+        </li>
+    </ul>
+</div>
+<p><a href="/boards">Home</a></p>
+<p><a th:href="@{/boards/{id}(id=${h1Board.id})}">Back</a></p>
+</body>
+</html>

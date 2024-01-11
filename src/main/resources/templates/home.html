@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1>게시판</h1>
+<div th:each="board: ${boards}">
+    <ul>
+        <li>
+            <a th:href="@{/boards/{id}(id=${board.id})}">[[${board.boards}]]</a>
+        </li>
+    </ul>
+</div>
+<a href="/boards/articleCreate">게시글 작성</a>
+</body>
+</html>

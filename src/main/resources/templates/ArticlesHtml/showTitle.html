@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>[[${h1.boards}]]</h1>
+
+<div th:if="${titleDesc.isEmpty()}">
+    <p>No Title Here,,,Damnnnnnnn</p>
+</div>
+
+<div th:each="titles  : ${titleDesc}">
+    <ul>
+        <li>
+            제목:<a th:href="@{/article/{id}/article(id=${titles.id})}">
+            [[${titles.title}]]</a>
+            <span>(id:[[${titles.id}]])</span>
+        </li>
+    </ul>
+</div>
+<p><a href="/boards">Home</a></p>
+</body>
+</html>

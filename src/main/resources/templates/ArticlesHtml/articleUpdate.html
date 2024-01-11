@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>articleUpdate</title>
+</head>
+<body>
+<h1>게시글 수정 [[${articleUpdate.title}]]</h1>
+<form th:action="@{/article/{id}/update(id=${articleUpdate.id})}" method="post">
+    <p>제목: <input type="text" name="title" th:value="${articleUpdate.title}" placeholder="제목을 입력하세요."></p>
+    <p>내용: <input type="text" name="content" th:value="${articleUpdate.content}" placeholder="내용을 입력하세요."></p>
+    <p>비밀번호: <input type="password" name="password" th:value="${articleUpdate.password}" placeholder="비밀번호를 입력하세요."></p>
+    게시판:
+    <select name="boardsEntity">
+        <option th:each="boards : ${bordList}" th:value="${boards.id}">
+            [[${boards.boards}]]
+        </option>
+    </select>
+    <p><input type="submit" value="수정"></p>
+</form>
+<p><a href="/boards">Home</a></p>
+</body>
+</html>
