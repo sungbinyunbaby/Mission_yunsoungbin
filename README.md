@@ -6,6 +6,9 @@
 
 # localhost:9090으로 접속해야 한다.
 
+
+
+
 # 게시판 관련 기능
  ![Alt text](image.png)
 
