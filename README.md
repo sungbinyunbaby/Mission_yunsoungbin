@@ -4,7 +4,7 @@
 - 게시글 관련 기능
 - 댓글 관련 기능
 
-- #localhost:9090으로 접속해야 한다.
+#localhost:9090으로 접속해야 한다.
 
 # 게시판 관련 기능
  ![Alt text](image.png)
