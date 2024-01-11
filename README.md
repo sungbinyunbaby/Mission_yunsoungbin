@@ -129,7 +129,8 @@
 
 2. 오름차순
 
-    게시글을 오름차순으로 하려고 하는데 findAll을 하지 않을거여서 만드는게 어려웠다.
+    게시글을 오름차순으로 하려고 하는데 findAll을 하지 않을거여서 만드는게 어려웠다. 
+    게시글 제목 나열은 fk로 연결된 boardEntity 게시판에 있는데 제목은 articleEntity에 있기에 boardRepository에서 조작을 해야 했다. 
     ```java
     //게시판 내의 모든 게시글 제목을 가져온다, 내림차순
     @GetMapping("/{id}")
