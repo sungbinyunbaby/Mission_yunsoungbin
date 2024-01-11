@@ -117,7 +117,7 @@ public class ArticlesController {
     {
         articlesService.update(id, title, content, password, boardsEntity);
         //수정한 게시판으로 타이틀 모음 페이지로 이동
-        return String.format("redirect:/boards/{id}", boardsEntity);
+        return String.format("redirect:/boards/%s", boardsEntity);
     }
 
     //게시글 Delete 전 비밀번호 확인
