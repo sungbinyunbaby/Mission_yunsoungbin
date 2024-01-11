@@ -91,9 +91,11 @@ localhost:9090/boards로 들어가면 게시판 종류와 게시글을 생성할
 ![Alt text](image-12.png)
 
 댓글 수정
+
 ![Alt text](%EB%8C%93%EA%B8%80%EC%9E%91%EC%84%B1.gif)
 
 댓글 삭제
+
 ![Alt text](%EB%8C%93%EA%B8%80%EC%82%AD%EC%A0%9C.gif)
 
 비밀번호가 틀리면 계속 비밀번호를 요청한다.
