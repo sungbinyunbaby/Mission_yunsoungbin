@@ -21,7 +21,7 @@ public class BoardsController {
     @GetMapping()
     public String boards(Model model) {
         model.addAttribute("boards", boardsService.findAll());
-        return "/home";
+        return "home";
     }
 
     //게시판 내의 모든 게시글 제목을 가져온다, 내림차순

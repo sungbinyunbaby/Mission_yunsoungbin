@@ -30,7 +30,7 @@ public class ArticlesController {
         model.addAttribute("article", articlesService.findById(id));
         //댓글
         model.addAttribute("commentList", articlesService.findById(id));
-        return "/ArticlesHtml/showArticle";
+        return "ArticlesHtml/showArticle";
     }
 
     //댓글 CRUD
