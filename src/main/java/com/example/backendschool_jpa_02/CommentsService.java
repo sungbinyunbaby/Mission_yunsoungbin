@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 public class CommentsService {
     private final CommentsRepository commentsRepository;
     private final ArticlesRepository articlesRepository;
-    private final CommentsService commentsService;
     public CommentsEntity findById(Long id) {
         return commentsRepository.findById(id).orElse(null);
     }
