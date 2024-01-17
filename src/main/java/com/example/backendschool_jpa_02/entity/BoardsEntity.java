@@ -15,6 +15,6 @@ public class BoardsEntity {
     private String boards;
 
     @OneToMany(mappedBy = "boardsEntity")
-    private List<ArticlesEntity> articlesEntityList;
+    private List<ArticlesEntity> articlesEntityList; // = new ArrayList<>();
 
 }

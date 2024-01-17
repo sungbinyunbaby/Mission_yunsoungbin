@@ -11,7 +11,7 @@
     <p>No Title Here,,,Damnnnnnnn</p>
 </div>
 
-<div th:each="titles  : ${titleDesc}">
+<div th:each="titles : ${titleDesc}">
     <ul>
         <li>
             제목:<a th:href="@{/article/{id}/article(id=${titles.id})}">

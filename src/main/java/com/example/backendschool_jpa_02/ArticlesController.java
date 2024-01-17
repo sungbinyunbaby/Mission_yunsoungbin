@@ -138,6 +138,7 @@ public class ArticlesController {
         model.addAttribute("deletePassword", deleteArticlePassword);
         if (password.equals(deleteArticlePassword.getPassword())){
             articlesService.deleteById(id);
+            //맞으면 생성한 게시글의 게시판으로 이동한다.
             return "redirect:/boards";
         }else {
             return "ArticlesHtml/checkDeletePassword";
